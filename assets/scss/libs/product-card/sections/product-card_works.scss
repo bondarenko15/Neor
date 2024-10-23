@@ -1,0 +1,123 @@
+.product-card_works {
+    padding: 40px 0;
+
+    .container {
+        .block_content {
+            margin-top: 20px;
+
+            .video_link {
+                border-radius: 10px;
+                display: inline-block;
+                position: relative;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .button_play {
+                    display: block;
+                    background: url('../img/play.svg') center center/cover no-repeat;
+                    width: 43px;
+                    height: 43px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+
+        .block_descr {
+            margin-top: 20px;
+
+            p {
+                display: block;
+                margin-bottom: 15px;
+                color: $colorFont;
+                font-family: Gilroy;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 20px;
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 648px) {}
+
+
+@media (min-width: 960px) {
+    .product-card_works {
+        padding: 40px 0;
+
+        .container {
+            .block_content {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-direction: row-reverse;
+                gap: 0 30px;
+
+                .video_link {
+                    max-width: 350px;
+                    flex-shrink: 0;
+
+                    .button_play {
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+
+                .block_descr {
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+
+
+
+@media (min-width: 1366px) {
+    .product-card_works {
+        padding: 60px 0;
+
+        .container {
+            .block_content {
+                margin-top: 40px;
+                .video_link {
+                    max-width: 592px;
+                    flex-shrink: 0;
+
+                    .button_play {
+                        width: 76px;
+                        height: 76px;
+                    }
+                }
+
+
+                .block_descr {
+                    margin: 0;
+
+                    p {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+
+        }
+    }
+}

@@ -1,0 +1,215 @@
+.product-card_main {
+    position: relative;
+    padding: 40px 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(90deg, #EAE9EF 0.96%, #F8F1E9 97.92%);
+    }
+
+    .container {
+        .content_flex {
+            .content_main {
+
+
+                &-title {
+                    .main_title {
+                        color: $colorFont;
+                        text-align: center;
+                        font-family: Gilroy;
+                        font-size: 27px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        margin: 0;
+                    }
+
+                    .title_descr {
+                        display: block;
+                        margin-top: 20px;
+                        color: $colorFont;
+                        text-align: center;
+                        font-family: Gilroy;
+                        font-size: 15px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                    }
+
+                    .content_main-action {
+                        margin-top: 20px;
+
+                        .block_honors {
+                            border-radius: 32.5px;
+                            background: linear-gradient(90deg, #F6E9D9 0%, #E6E3EE 68%, #F6E9D9 100%);
+                            box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.11);
+                            padding: 18px 23px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .honors_descr {
+                                color: $colorFont;
+                                font-family: Gilroy;
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 30px;
+                            }
+
+                            .honors_img {
+                                width: 53px;
+                                height: 33px;
+                                flex-shrink: 0;
+                                position: relative;
+                            }
+
+                        }
+
+                        .block_gif {
+
+                            padding: 35px 0 30px;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            position: relative;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 5px;
+                                display: block;
+                                max-width: 85%;
+
+                            }
+
+                            .goods_img {
+                                position: absolute;
+                                bottom: -20px;
+                                right: 0;
+                                width: 40%;
+                            }
+                        }
+                    }
+                }
+
+
+
+                &-prices {
+
+                    .default_price {
+                        margin-top: 15px;
+                        border-radius: 5px;
+                        background: $colorWhite;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        padding: 15px;
+
+                        .price_title {
+                            color: $colorFont;
+                            font-family: Gilroy;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 30px;
+                        }
+
+                        .price {
+                            color: $colorFont;
+                            font-family: Gilroy;
+                            font-size: 25px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 30px;
+                        }
+                    }
+
+                    .promotional_price {
+                        margin-top: 15px;
+                        border-radius: 5px;
+                        background: $colorWhite;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 15px 35px;
+
+                        .old_price,
+                        .new_price {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+
+                            .price_title {
+                                color: $colorFont;
+                                font-family: Gilroy;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 30px;
+                            }
+                        }
+
+                        .border {
+                            width: 1px;
+                            height: 45px;
+                            background: #BFBFBF;
+                            display: block;
+                        }
+
+                        .old_price {
+                            .price {
+                                color: $colorFont;
+                                font-family: Gilroy;
+                                font-size: 22px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 30px;
+                                text-decoration: line-through;
+                            }
+                        }
+
+                        .new_price {
+                            .price {
+                                color: $colorPromo;
+                                font-family: Gilroy;
+                                font-size: 25px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (min-width: 648px) {
+
+}
+
+
+@media (min-width: 960px) {
+    
+}
+
+
+
+@media (min-width: 1366px) {
+    
+}
+
+
+@media (min-width: 1880px) {
+    
+}

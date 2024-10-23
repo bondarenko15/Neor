@@ -1,0 +1,415 @@
+.product-card_reviews {
+    padding: 40px 0;
+
+    .container {
+        .block_content {
+
+
+            .block_reviews {
+                .swiper_reviews {
+                    padding: 20px 0 0;
+
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            border-radius: 10px;
+                            background: #EFEFEF;
+                            padding: 10px;
+                            position: relative;
+                            min-height: 50px;
+
+                            img {
+                                position: absolute;
+                                top: -15px;
+                                left: 10px;
+                                width: 45px;
+                                height: 45px;
+                            }
+
+                            .slide_top {
+                                margin: 0 auto;
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: baseline;
+                                gap: 0 6px;
+                                padding: 0 0 0 60px;
+
+                                .nameUser {
+                                    color: $colorFont;
+                                    font-family: Gilroy;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    line-height: normal;
+                                }
+
+                                ul {
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    gap: 0 5px;
+
+                                    .star_reviews {
+                                        display: block;
+                                        width: 13px;
+                                        height: 13px;
+
+                                        .img_star {
+                                            fill: $colorPrice;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .slide_descr {
+                                margin-top: 5px;
+                                color: $colorFont;
+                                font-family: Gilroy;
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 20px;
+
+                            }
+                        }
+                    }
+
+
+                }
+
+                .swiper_btn {
+
+                    display: flex;
+                    align-items: flex-end;
+                    width: 100px;
+                    height: 40px;
+                    justify-content: space-between;
+                    margin: 20px auto 0;
+
+                    .swiper-button-prev,
+                    .swiper-button-next {
+                        position: static;
+                        width: 38px;
+                        height: 38px;
+                        background: url('../img/arrow.svg') center center/cover no-repeat;
+                        display: block;
+                        font-size: 0;
+                        flex-shrink: 0;
+
+                        &::after,
+                        &::before {
+                            display: none;
+                        }
+
+
+                    }
+
+                    .swiper-button-prev {
+                        transform: rotate((180deg));
+
+                    }
+                }
+            }
+
+            .reviews_form {
+                margin-top: 10px;
+
+                .block_title {
+                    border-radius: 10px;
+                    background: #EFEFEF;
+                    padding: 10px;
+
+                    span {
+                        color: $colorPrice;
+                        text-align: center;
+                        font-family: Gilroy;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 28px;
+                        display: block;
+                    }
+                }
+
+                .form {
+                    border-radius: 10px;
+                    background: #EFEFEF;
+                    padding: 30px 20px;
+                    margin-top: 20px;
+
+                    .form_title {
+                        color: #33275B;
+                        text-align: center;
+                        font-family: Gilroy;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 28px;
+                        display: block;
+                    }
+
+                    .rating {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 0 5px;
+                        margin-top: 5px;
+
+                        .stars {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            gap: 0 5px;
+
+                            .star {
+                                width: 13px;
+                                height: 12px;
+                                display: block;
+                            }
+
+                            .active {
+                                .img_star {
+                                    fill: $colorPrice;
+                                }
+                            }
+
+                            .hover {
+                                .img_star {
+                                    fill: $colorPrice;
+                                }
+                            }
+                        }
+
+                        p {
+                            color: $colorFont;
+                            font-family: Gilroy;
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 28px;
+                        }
+                    }
+
+                    .inputs {
+                        margin-top: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: stretch;
+                        justify-content: center;
+
+                        .input {
+                            margin-bottom: 10px;
+                            border-radius: 24.5px;
+                            &:last-child {
+                                margin: 0;
+                            }
+
+                            input,
+                            textarea {
+                                width: 100%;
+                                border-radius: 24.5px;
+                                background: $colorWhite;
+                                border: none;
+                                color: #828482;
+                                font-family: Gilroy;
+                                font-size: 12px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 28px;
+                                padding: 10px 20px;
+                            }
+
+                            textarea {
+                                min-height: 170px;
+                            }
+                            .error {
+                                outline: 1px solid red;
+                            }
+                        }
+                        
+                        .form_btn {
+                            padding: 10px 50px;
+                            border-radius: 25.5px;
+                            background: linear-gradient(90deg, #CD770A 0%, #DAA716 100%);
+                            box-shadow: 0px 11px 19px 2px rgba(223, 158, 35, 0.34);
+                            color: $colorWhite;
+                            text-align: center;
+                            font-family: Gilroy;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 800;
+                            line-height: 30px;
+                            margin: 30px auto 0;
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 960px) {
+    .product-card_reviews {
+        .container {
+            .block_content {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 0 30px;
+                margin-top: 30px;
+
+                .block_reviews {
+                    width: calc(60% - 15px);
+                    position: relative;
+
+                    .swiper_reviews {
+                        height: 480px;
+
+                        margin: 50px 0;
+
+                        .swiper-wrapper {
+                            display: flex;
+                            flex-direction: column;
+                            height: 100%;
+
+                            .swiper-slide {
+                                height: auto;
+                            }
+                        }
+                    }
+
+                    .swiper_btn {
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .swiper-button-prev {
+                            transform: rotate(270deg);
+                        }
+
+                        .swiper-button-next {
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+
+                .reviews_form {
+                    width: calc(40% - 15px);
+                    margin: 0;
+
+                    .form {
+                        .rating {
+                            margin-top: 15px;
+                            align-items: baseline;
+
+                            p {
+                                line-height: normal;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+
+@media (min-width: 1366px) {
+    .product-card_reviews {
+        padding: 60px 0;
+
+        .container {
+            .block_content {
+
+
+                .block_reviews {
+                    
+                    .swiper_reviews {
+                        height: 667px;
+                        .swiper-wrapper {
+                            .swiper-slide {
+                                padding: 25px 20px;
+
+                                .smile {
+                                    width: 77px;
+                                    height: 77px;
+                                }
+
+                                .slide_top {
+                                    gap: 0 10px;
+                                    padding: 0 0 0 80px;
+
+                                    .nameUser {
+                                        font-size: 25px;
+                                    }
+                                }
+
+                                .slide_descr {
+                                    margin-top: 25px;
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .reviews_form {
+                    .block_title {
+                        padding: 40px 80px;
+
+                        span {
+                            font-size: 25px;
+                        }
+
+                    }
+
+                    .form {
+                        padding: 40px 20px;
+
+                        .form_title {
+                            font-size: 25px;
+                        }
+
+                        .rating {
+                            margin-top: 15px;
+
+                            p {
+                                font-size: 15px;
+                            }
+
+                            .stars {
+                                .start {
+                                    width: 14px;
+                                    height: 14px;
+                                }
+                            }
+                        }
+
+                        .inputs {
+                            .input {
+                                input {
+                                    font-size: 15px;
+                                }
+
+                                textarea {
+                                    height: 240px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1880px) {}
