@@ -91,60 +91,28 @@
                                 position: absolute;
                                 bottom: -20px;
                                 right: 0;
-                                width: 40%;
+                                width: 35%;
                             }
                         }
                     }
                 }
 
+                .img_good {
+                    display: none;
+                }
 
+                .block_rigth {
+                    .content_main-prices {
 
-                &-prices {
-
-                    .default_price {
-                        margin-top: 15px;
-                        border-radius: 5px;
-                        background: $colorWhite;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex-direction: column;
-                        padding: 15px;
-
-                        .price_title {
-                            color: $colorFont;
-                            font-family: Gilroy;
-                            font-size: 16px;
-                            font-style: normal;
-                            font-weight: 600;
-                            line-height: 30px;
-                        }
-
-                        .price {
-                            color: $colorFont;
-                            font-family: Gilroy;
-                            font-size: 25px;
-                            font-style: normal;
-                            font-weight: 600;
-                            line-height: 30px;
-                        }
-                    }
-
-                    .promotional_price {
-                        margin-top: 15px;
-                        border-radius: 5px;
-                        background: $colorWhite;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        padding: 15px 35px;
-
-                        .old_price,
-                        .new_price {
+                        .default_price {
+                            margin: 15px 0 30px;
+                            border-radius: 5px;
+                            background: $colorWhite;
                             display: flex;
                             justify-content: center;
                             align-items: center;
                             flex-direction: column;
+                            padding: 15px;
 
                             .price_title {
                                 color: $colorFont;
@@ -154,30 +122,9 @@
                                 font-weight: 600;
                                 line-height: 30px;
                             }
-                        }
 
-                        .border {
-                            width: 1px;
-                            height: 45px;
-                            background: #BFBFBF;
-                            display: block;
-                        }
-
-                        .old_price {
                             .price {
                                 color: $colorFont;
-                                font-family: Gilroy;
-                                font-size: 22px;
-                                font-style: normal;
-                                font-weight: 600;
-                                line-height: 30px;
-                                text-decoration: line-through;
-                            }
-                        }
-
-                        .new_price {
-                            .price {
-                                color: $colorPromo;
                                 font-family: Gilroy;
                                 font-size: 25px;
                                 font-style: normal;
@@ -185,6 +132,929 @@
                                 line-height: 30px;
                             }
                         }
+
+                        .promotional_price {
+
+                            border-radius: 5px;
+                            background: $colorWhite;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            padding: 15px;
+
+                            .old_price,
+                            .new_price {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                flex-direction: column;
+                                width: 50%;
+
+                                .price_title {
+                                    color: $colorFont;
+                                    font-family: Gilroy;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    line-height: 30px;
+                                }
+                            }
+
+                            .border {
+                                width: 1px;
+                                height: 45px;
+                                background: #BFBFBF;
+                                display: block;
+                            }
+
+                            .old_price {
+                                .price {
+                                    color: $colorFont;
+                                    font-family: Gilroy;
+                                    font-size: 22px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    line-height: 30px;
+                                    text-decoration: line-through;
+                                }
+                            }
+
+                            .new_price {
+                                .price {
+                                    color: $colorPromo;
+                                    font-family: Gilroy;
+                                    font-size: 25px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    line-height: 30px;
+                                }
+                            }
+                        }
+
+                        #timer {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            gap: 0 1px;
+                            border-radius: 24px;
+                            background: #EBEBEB;
+                            padding: 10px 27px;
+                            width: 254px;
+                            margin: -10px auto 0;
+                            text-align: center;
+                            position: relative;
+                            z-index: 2;
+
+                            p {
+                                color: $colorFont;
+                                font-family: Gilroy;
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 30px;
+                                display: block;
+                                margin-right: 2px;
+                            }
+
+                            span {
+                                color: $colorFont;
+                                font-family: Gilroy;
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 800;
+                                line-height: 30px;
+                            }
+                        }
+                    }
+
+                    .content_services {
+                        .services_title {
+                            border-radius: 5px;
+                            background: $colorWhite;
+                            padding: 40px 20px 20px;
+                            margin: -25px 0 0 0;
+                            position: relative;
+                            z-index: 1;
+
+                            .title_span {
+                                color: $colorFont;
+                                font-family: Gilroy;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 30px;
+                                position: relative;
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                gap: 0 15px;
+                                position: relative;
+
+                                &::after {
+                                    content: '';
+                                    background: url('../img/tootlip.svg') center center/cover no-repeat;
+                                    width: 18px;
+                                    height: 18px;
+                                    display: block;
+                                }
+
+                                .tooltip {
+                                    position: absolute;
+                                    top: 30px;
+                                    width: 275px;
+                                    left: 0;
+                                    border-radius: 10px;
+                                    background: $colorWhite;
+                                    box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.06);
+                                    padding: 17px;
+                                    height: 0;
+                                    opacity: 0;
+                                    visibility: hidden;
+
+                                    p {
+                                        color: $colorFont;
+                                        font-family: Gilroy;
+                                        font-size: 12px;
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        line-height: 17px;
+                                    }
+
+                                    .close {
+                                        display: block;
+                                        background: url('../img/close.svg') center center/cover no-repeat;
+                                        width: 10px;
+                                        height: 10px;
+                                        position: absolute;
+                                        top: 10px;
+                                        right: 10px;
+                                        z-index: 10;
+                                    }
+                                }
+
+                                .visible {
+                                    visibility: visible;
+                                    opacity: 1;
+                                    height: auto;
+                                }
+                            }
+
+                            .checkbox {
+                                position: relative;
+                                margin-top: 20px;
+                                display: inline-block;
+                                width: 100%;
+
+                                .custom-checkbox {
+                                    position: absolute;
+                                    z-index: -1;
+                                    opacity: 0;
+                                }
+
+                                .checkbox_label {
+                                    color: $colorFont;
+                                    font-family: Gilroy;
+                                    font-size: 14px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: 30px;
+                                    padding: 0 0 0 35px;
+
+                                    i {
+                                        font-weight: 600;
+
+                                    }
+                                }
+
+                                .custom-checkbox+label {
+                                    align-items: center;
+                                    user-select: none;
+                                    cursor: pointer;
+                                }
+
+                                .custom-checkbox+label::before {
+                                    content: '';
+                                    position: absolute;
+                                    display: block;
+                                    top: 4px;
+                                    left: 0;
+                                    width: 22px;
+                                    height: 22px;
+                                    flex-shrink: 0;
+                                    flex-grow: 0;
+                                    background: $colorWhite;
+                                    border: 1px solid #CD780A;
+                                    border-radius: 50px;
+                                    z-index: -1;
+                                }
+
+                                .custom-checkbox+label::after {
+                                    content: '';
+                                    position: absolute;
+                                    background: linear-gradient(90deg, #CD770A 0%, #DAA716 100%);
+
+                                    border-radius: 50px;
+                                    top: 8px;
+                                    left: 4px;
+                                    width: 14px;
+                                    height: 14px;
+                                    display: none;
+                                    z-index: 10;
+                                }
+                            }
+
+                            .custom-checkbox:checked+label::after {
+                                display: block;
+                            }
+                        }
+
+                        .btn_buy {
+                            border-radius: 25.5px;
+                            background: linear-gradient(90deg, #CD770A 0%, #DAA716 100%);
+                            box-shadow: 0px 3px 10px 0px rgba(212, 145, 16, 0.52);
+                            color: $colorWhite;
+                            font-family: Gilroy;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 800;
+                            line-height: 30px;
+                            padding: 10px 60px;
+                            display: block;
+                            width: 175px;
+                            margin: 15px auto 0;
+                        }
+
+                        .methods_payment {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 0 7px;
+                            flex-wrap: wrap;
+                            margin-top: 40px;
+
+                            p {
+                                color: $colorFont;
+                                font-family: Gilroy;
+                                font-size: 12px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 30px;
+                            }
+
+                            li {
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                gap: 0 4px;
+
+                                img {
+                                    width: 21px;
+                                    height: 21px;
+                                    display: block;
+                                    object-fit: cover;
+
+                                }
+
+                                span {
+                                    color: $colorFont;
+                                    font-family: Gilroy;
+                                    font-size: 12px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .content_group {
+                    display: flex;
+                    align-items: stretch;
+                    justify-content: flex-start;
+                    gap: 0 10px;
+                    margin-top: 10px;
+                    border-radius: 5px;
+                    background: $colorWhite;
+                    padding: 30px 20px;
+
+                    .block_descr {
+                        width: 65%;
+
+                        .group_title {
+                            background: linear-gradient(90deg, #CD770A 0%, #DBA716 100%);
+                            background-clip: text;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            font-family: Gilroy;
+                            font-size: 35px;
+                            font-style: normal;
+                            font-weight: 800;
+                            line-height: 30px;
+                            text-transform: uppercase;
+                        }
+
+                        .group_descr {
+                            color: $colorFont;
+                            font-family: Gilroy;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 17px;
+                            display: block;
+                            margin-top: 10px;
+                        }
+
+                        .group_link {
+                            width: 172px;
+                            padding: 10px;
+                            text-align: center;
+                            display: block;
+                            margin-top: 15px;
+                            color: $colorWhite;
+                            font-family: Gilroy;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 800;
+                            line-height: 30px;
+                            text-transform: uppercase;
+                            border-radius: 25.5px;
+                            background: linear-gradient(90deg, #CD770A 0%, #DAA716 100%);
+                            box-shadow: 0px 3px 10px 0px rgba(212, 145, 16, 0.52);
+                            
+                        }
+                    }
+
+                    .img {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: calc(35% - 10px);
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                            display: block;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+
+        .content_bottom {
+            margin-top: 10px;
+            border-radius: 5px;
+            background: $colorWhite;
+            padding: 20px;
+
+            &-item {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 0 15px;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                .img {
+                    width: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-shrink: 0;
+
+                    img {
+                        width: auto;
+                        display: block;
+                    }
+                }
+
+                P {
+                    color: #353535;
+                    font-family: Gilroy;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 960px) {
+    .product-card_main {
+        position: relative;
+
+        .container {
+            position: static;
+
+            .content_flex {
+                .content_main {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: stretch;
+                    position: relative;
+
+                    &-title {
+                        width: 45%;
+
+                        .main_title {
+                            font-size: 36px;
+                        }
+
+                        .content_main-action {
+                            .block_honors {
+                                max-width: 85%;
+                                margin: 0 auto;
+
+                                .honors_descr {
+                                    font-size: 16px;
+                                }
+
+                                .honors_img {
+                                    width: 53px;
+                                    height: 33px;
+                                    flex-shrink: 0;
+                                    position: relative;
+                                }
+
+                            }
+
+                            .block_gif {
+                                margin: -20px 0 0;
+                                padding: 0;
+                                position: relative;
+                                z-index: -1;
+
+                                img {
+                                    max-width: 100%;
+
+                                }
+
+                                .goods_img {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+
+                    .img_good {
+                        position: absolute;
+                        z-index: -1;
+                        top: 23%;
+                        left: 41%;
+                        display: block;
+                        width: 30%;
+                    }
+
+                    .block_rigth {
+                        width: 35%;
+
+                        .content_main-prices {
+
+                            .default_price {
+
+                                .price_title {
+                                    color: $colorFont;
+                                    font-family: Gilroy;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    line-height: 30px;
+                                }
+
+                                .price {
+                                    color: $colorFont;
+                                    font-family: Gilroy;
+                                    font-size: 25px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    line-height: 30px;
+                                }
+                            }
+
+                            .promotional_price {
+
+                                .old_price,
+                                .new_price {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    flex-direction: column;
+                                    width: 50%;
+
+                                    .price_title {
+                                        color: $colorFont;
+                                        font-family: Gilroy;
+                                        font-size: 16px;
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        line-height: 30px;
+                                    }
+                                }
+
+                                .border {
+                                    width: 1px;
+                                    height: 45px;
+                                    background: #BFBFBF;
+                                    display: block;
+                                }
+
+                                .old_price {
+                                    .price {
+                                        color: $colorFont;
+                                        font-family: Gilroy;
+                                        font-size: 22px;
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        line-height: 30px;
+                                        text-decoration: line-through;
+                                    }
+                                }
+
+                                .new_price {
+                                    .price {
+                                        color: $colorPromo;
+                                        font-family: Gilroy;
+                                        font-size: 25px;
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        line-height: 30px;
+                                    }
+                                }
+                            }
+
+                            #timer {
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                gap: 0 1px;
+                                border-radius: 24px;
+                                background: #EBEBEB;
+                                padding: 10px 27px;
+                                width: 254px;
+                                margin: -10px auto 0;
+                                text-align: center;
+                                position: relative;
+                                z-index: 2;
+
+                                p {
+                                    color: $colorFont;
+                                    font-family: Gilroy;
+                                    font-size: 14px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    line-height: 30px;
+                                    display: block;
+                                    margin-right: 2px;
+                                }
+
+                                span {
+                                    color: $colorFont;
+                                    font-family: Gilroy;
+                                    font-size: 14px;
+                                    font-style: normal;
+                                    font-weight: 800;
+                                    line-height: 30px;
+                                }
+                            }
+                        }
+
+                        .content_services {
+                            .services_title {
+                                border-radius: 5px;
+                                background: $colorWhite;
+                                padding: 40px 20px 20px;
+                                margin: -25px 0 0 0;
+                                position: relative;
+                                z-index: 1;
+
+                                .title_span {
+                                    color: $colorFont;
+                                    font-family: Gilroy;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    line-height: 30px;
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    gap: 0 15px;
+                                    position: relative;
+
+                                    &::after {
+                                        content: '';
+                                        background: url('../img/tootlip.svg') center center/cover no-repeat;
+                                        width: 18px;
+                                        height: 18px;
+                                        display: block;
+                                    }
+
+                                    .tooltip {
+                                        position: absolute;
+                                        top: 30px;
+                                        width: 275px;
+                                        left: 0;
+                                        border-radius: 10px;
+                                        background: $colorWhite;
+                                        box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.06);
+                                        padding: 17px;
+                                        height: 0;
+                                        opacity: 0;
+                                        visibility: hidden;
+
+                                        p {
+                                            color: $colorFont;
+                                            font-family: Gilroy;
+                                            font-size: 12px;
+                                            font-style: normal;
+                                            font-weight: 500;
+                                            line-height: 17px;
+                                        }
+
+                                        .close {
+                                            display: block;
+                                            background: url('../img/close.svg') center center/cover no-repeat;
+                                            width: 10px;
+                                            height: 10px;
+                                            position: absolute;
+                                            top: 10px;
+                                            right: 10px;
+                                            z-index: 10;
+                                        }
+                                    }
+
+                                    .visible {
+                                        visibility: visible;
+                                        opacity: 1;
+                                        height: auto;
+                                    }
+                                }
+
+                                .checkbox {
+                                    position: relative;
+                                    margin-top: 20px;
+                                    display: inline-block;
+                                    width: 100%;
+
+                                    .custom-checkbox {
+                                        position: absolute;
+                                        z-index: -1;
+                                        opacity: 0;
+                                    }
+
+                                    .checkbox_label {
+                                        color: $colorFont;
+                                        font-family: Gilroy;
+                                        font-size: 14px;
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        line-height: 30px;
+                                        padding: 0 0 0 35px;
+
+                                        i {
+                                            font-weight: 600;
+
+                                        }
+                                    }
+
+                                    .custom-checkbox+label {
+                                        align-items: center;
+                                        user-select: none;
+                                        cursor: pointer;
+                                    }
+
+                                    .custom-checkbox+label::before {
+                                        content: '';
+                                        position: absolute;
+                                        display: block;
+                                        top: 4px;
+                                        left: 0;
+                                        width: 22px;
+                                        height: 22px;
+                                        flex-shrink: 0;
+                                        flex-grow: 0;
+                                        background: $colorWhite;
+                                        border: 1px solid #CD780A;
+                                        border-radius: 50px;
+                                        z-index: -1;
+                                    }
+
+                                    .custom-checkbox+label::after {
+                                        content: '';
+                                        position: absolute;
+                                        background: linear-gradient(90deg, #CD770A 0%, #DAA716 100%);
+
+                                        border-radius: 50px;
+                                        top: 8px;
+                                        left: 4px;
+                                        width: 14px;
+                                        height: 14px;
+                                        display: none;
+                                        z-index: 10;
+                                    }
+                                }
+
+                                .custom-checkbox:checked+label::after {
+                                    display: block;
+                                }
+                            }
+
+                            .btn_buy {
+                                border-radius: 25.5px;
+                                background: linear-gradient(90deg, #CD770A 0%, #DAA716 100%);
+                                box-shadow: 0px 3px 10px 0px rgba(212, 145, 16, 0.52);
+                                color: $colorWhite;
+                                font-family: Gilroy;
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 800;
+                                line-height: 30px;
+                                padding: 10px 60px;
+                                display: block;
+                                width: 175px;
+                                margin: 15px auto 0;
+                            }
+
+                            .methods_payment {
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                justify-content: flex-start;
+                                gap: 0 7px;
+                                flex-wrap: wrap;
+                                margin-top: 40px;
+
+                                p {
+                                    color: $colorFont;
+                                    font-family: Gilroy;
+                                    font-size: 12px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: 30px;
+                                }
+
+                                li {
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    gap: 0 4px;
+
+                                    img {
+                                        width: 21px;
+                                        height: 21px;
+                                        display: block;
+                                        object-fit: cover;
+
+                                    }
+
+                                    span {
+                                        color: $colorFont;
+                                        font-family: Gilroy;
+                                        font-size: 12px;
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        line-height: 30px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .content_group {
+                        display: flex;
+                        align-items: stretch;
+                        justify-content: flex-start;
+                        gap: 0 10px;
+                        margin-top: 10px;
+                        border-radius: 5px;
+                        background: $colorWhite;
+                        padding: 30px 20px;
+
+                        .block_descr {
+                            width: 65%;
+
+                            .group_title {
+                                background: linear-gradient(90deg, #CD770A 0%, #DBA716 100%);
+                                background-clip: text;
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                font-family: Gilroy;
+                                font-size: 35px;
+                                font-style: normal;
+                                font-weight: 800;
+                                line-height: 30px;
+                                text-transform: uppercase;
+                            }
+
+                            .group_descr {
+                                color: $colorFont;
+                                font-family: Gilroy;
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 17px;
+                                display: block;
+                                margin-top: 10px;
+                            }
+
+                            .group_link {
+                                display: block;
+                                margin-top: 15px;
+                                color: $colorWhite;
+                                font-family: Gilroy;
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 800;
+                                line-height: 30px;
+                                text-transform: uppercase;
+                                border-radius: 25.5px;
+                                background: linear-gradient(90deg, #CD770A 0%, #DAA716 100%);
+                                box-shadow: 0px 3px 10px 0px rgba(212, 145, 16, 0.52);
+                                padding: 10px 50px;
+                            }
+                        }
+
+                        .img {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: calc(35% - 10px);
+
+                            img {
+                                width: 100%;
+                                height: auto;
+                                display: block;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .content_bottom {
+                margin-top: 10px;
+                background: transparent;
+                border-radius: 0;
+                padding: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: absolute;
+                bottom: -30px;
+                left: 0;
+                right: 0;
+
+                &-item {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 0 15px;
+                    border-radius: 0;
+                    background: $colorWhite;
+                    padding: 15px 20px;
+                    box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.11);
+                    margin: 0;
+                    min-height: 60px;
+
+                    &:first-child {
+                        border-radius: 40px 0px 0px 40px;
+                    }
+
+                    &:last-child {
+                        border-radius: 0 40px 40px 0;
+                    }
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    .img {
+                        width: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-shrink: 0;
+
+                        img {
+                            width: auto;
+                            display: block;
+                        }
+                    }
+
+                    P {
+                        color: #353535;
+                        font-family: Gilroy;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
                     }
                 }
             }
@@ -194,22 +1064,571 @@
 
 
 
-@media (min-width: 648px) {
-
-}
-
-
-@media (min-width: 960px) {
-    
-}
-
-
-
 @media (min-width: 1366px) {
-    
-}
+    .product-card_main {
+        padding: 60px 0;
 
+        .container {
+
+            .content_flex {
+                .content_main {
+
+                    &-title {
+                        width: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: space-between;
+
+                        .main_title {
+                            font-size: 50px;
+                            text-align: left;
+                        }
+
+                        .title_descr {
+                            font-size: 16px;
+                            text-align: left;
+                            display: block;
+                            max-width: 85%;
+                        }
+
+                        .content_main-action {
+                            max-width: 85%;
+
+                            .block_honors {
+                                max-width: 91%;
+                                margin: 0 auto;
+
+                                .honors_descr {
+                                    font-size: 20px;
+                                }
+
+                                .honors_img {
+                                    width: 75px;
+                                    height: 46px;
+                                }
+
+                            }
+                        }
+                    }
+
+                    .img_good {
+                        top: 23%;
+                        left: 44%;
+                        width: 30%;
+                    }
+
+                    .block_rigth {
+                        width: 30%;
+
+                        .content_main-prices {
+
+                            .default_price {
+                                margin-top: 15px;
+                                border-radius: 5px;
+                                background: $colorWhite;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                flex-direction: column;
+                                padding: 15px;
+                                width: 100%;
+
+                                .price_title {
+                                    font-size: 20px;
+                                }
+
+                                .price {
+                                    font-size: 30px;
+                                }
+                            }
+
+                            .promotional_price {
+                                width: 100%;
+
+                                .old_price,
+                                .new_price {
+                                    .price_title {
+                                        font-size: 20px;
+                                    }
+                                }
+
+                                .old_price {
+                                    .price {
+                                        font-size: 28px;
+                                    }
+                                }
+
+                                .new_price {
+                                    .price {
+                                        font-size: 30px;
+                                    }
+                                }
+                            }
+
+                            #timer {
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                gap: 0 1px;
+                                border-radius: 24px;
+                                background: #EBEBEB;
+                                padding: 10px 27px;
+                                width: 254px;
+                                margin: -10px auto 0;
+                                text-align: center;
+                                position: relative;
+                                z-index: 2;
+
+                                p {
+                                    color: $colorFont;
+                                    font-family: Gilroy;
+                                    font-size: 14px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    line-height: 30px;
+                                    display: block;
+                                    margin-right: 2px;
+                                }
+
+                                span {
+                                    color: $colorFont;
+                                    font-family: Gilroy;
+                                    font-size: 14px;
+                                    font-style: normal;
+                                    font-weight: 800;
+                                    line-height: 30px;
+                                }
+                            }
+                        }
+
+                        .content_services {
+                            .services_title {
+                                border-radius: 5px;
+                                background: $colorWhite;
+                                padding: 40px 20px 20px;
+                                margin: -25px 0 0 0;
+                                position: relative;
+                                z-index: 1;
+
+                                .title_span {
+                                    color: $colorFont;
+                                    font-family: Gilroy;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    line-height: 30px;
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    gap: 0 15px;
+                                    position: relative;
+
+                                    &::after {
+                                        content: '';
+                                        background: url('../img/tootlip.svg') center center/cover no-repeat;
+                                        width: 18px;
+                                        height: 18px;
+                                        display: block;
+                                    }
+
+                                    .tooltip {
+                                        position: absolute;
+                                        top: 30px;
+                                        width: 275px;
+                                        left: 0;
+                                        border-radius: 10px;
+                                        background: $colorWhite;
+                                        box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.06);
+                                        padding: 17px;
+                                        height: 0;
+                                        opacity: 0;
+                                        visibility: hidden;
+
+                                        p {
+                                            color: $colorFont;
+                                            font-family: Gilroy;
+                                            font-size: 12px;
+                                            font-style: normal;
+                                            font-weight: 500;
+                                            line-height: 17px;
+                                        }
+
+                                        .close {
+                                            display: block;
+                                            background: url('../img/close.svg') center center/cover no-repeat;
+                                            width: 10px;
+                                            height: 10px;
+                                            position: absolute;
+                                            top: 10px;
+                                            right: 10px;
+                                            z-index: 10;
+                                        }
+                                    }
+
+                                    .visible {
+                                        visibility: visible;
+                                        opacity: 1;
+                                        height: auto;
+                                    }
+                                }
+                            }
+                        }
+
+                        .content_group {
+                            .block_descr {
+                                .group_link {
+                                    width: 172px;
+                                    padding: 10px;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .content_bottom {
+                margin-top: 10px;
+                background: transparent;
+                border-radius: 0;
+                padding: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: absolute;
+                bottom: -30px;
+                left: 12%;
+                right: 12%;
+
+                &-item {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 0 15px;
+                    border-radius: 0;
+                    background: $colorWhite;
+                    padding: 15px 20px;
+                    box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.11);
+                    margin: 0;
+                    min-height: 60px;
+
+                    &:first-child {
+                        border-radius: 40px 0px 0px 40px;
+                    }
+
+                    &:last-child {
+                        border-radius: 0 40px 40px 0;
+                    }
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    .img {
+                        width: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-shrink: 0;
+
+                        img {
+                            width: auto;
+                            display: block;
+                        }
+                    }
+
+                    P {
+                        color: #353535;
+                        font-family: Gilroy;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                    }
+                }
+            }
+        }
+    }
+}
 
 @media (min-width: 1880px) {
-    
+    .product-card_main {
+        padding: 120px 0;
+
+        .container {
+
+            .content_flex {
+                .content_main {
+
+                    &-title {
+                        width: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: space-between;
+
+                        .main_title {
+                            font-size: 50px;
+                            text-align: left;
+                        }
+
+                        .title_descr {
+                            font-size: 16px;
+                            text-align: left;
+                            display: block;
+                            max-width: 85%;
+                        }
+
+                        .content_main-action {
+                            max-width: 85%;
+
+                            .block_honors {
+                                max-width: 91%;
+                                margin: 0 auto;
+
+                                .honors_descr {
+                                    font-size: 20px;
+                                }
+
+                                .honors_img {
+                                    width: 75px;
+                                    height: 46px;
+                                }
+
+                            }
+                        }
+                    }
+
+                    .img_good {
+                        top: 23%;
+                        left: 44%;
+                        width: 30%;
+                    }
+
+                    .block_rigth {
+                        width: 30%;
+
+                        .content_main-prices {
+
+
+                            .default_price {
+                                margin-top: 15px;
+                                border-radius: 5px;
+                                background: $colorWhite;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                flex-direction: column;
+                                padding: 15px;
+                                width: 100%;
+
+                                .price_title {
+                                    font-size: 20px;
+                                }
+
+                                .price {
+                                    font-size: 30px;
+                                }
+                            }
+
+                            .promotional_price {
+                                width: 100%;
+
+                                .old_price,
+                                .new_price {
+                                    .price_title {
+                                        font-size: 20px;
+                                    }
+                                }
+
+                                .old_price {
+                                    .price {
+                                        font-size: 28px;
+                                    }
+                                }
+
+                                .new_price {
+                                    .price {
+                                        font-size: 30px;
+                                    }
+                                }
+                            }
+
+                            #timer {
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                gap: 0 1px;
+                                border-radius: 24px;
+                                background: #EBEBEB;
+                                padding: 10px 27px;
+                                width: 254px;
+                                margin: -10px auto 0;
+                                text-align: center;
+                                position: relative;
+                                z-index: 2;
+
+                                p {
+                                    color: $colorFont;
+                                    font-family: Gilroy;
+                                    font-size: 14px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    line-height: 30px;
+                                    display: block;
+                                    margin-right: 2px;
+                                }
+
+                                span {
+                                    color: $colorFont;
+                                    font-family: Gilroy;
+                                    font-size: 14px;
+                                    font-style: normal;
+                                    font-weight: 800;
+                                    line-height: 30px;
+                                }
+                            }
+                        }
+
+                        .content_services {
+                            .services_title {
+                                border-radius: 5px;
+                                background: $colorWhite;
+                                padding: 40px 20px 20px;
+                                margin: -25px 0 0 0;
+                                position: relative;
+                                z-index: 1;
+
+                                .title_span {
+                                    color: $colorFont;
+                                    font-family: Gilroy;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    line-height: 30px;
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    gap: 0 15px;
+                                    position: relative;
+
+                                    &::after {
+                                        content: '';
+                                        background: url('../img/tootlip.svg') center center/cover no-repeat;
+                                        width: 18px;
+                                        height: 18px;
+                                        display: block;
+                                    }
+
+                                    .tooltip {
+                                        position: absolute;
+                                        top: 30px;
+                                        width: 275px;
+                                        left: 0;
+                                        border-radius: 10px;
+                                        background: $colorWhite;
+                                        box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.06);
+                                        padding: 17px;
+                                        height: 0;
+                                        opacity: 0;
+                                        visibility: hidden;
+
+                                        p {
+                                            color: $colorFont;
+                                            font-family: Gilroy;
+                                            font-size: 12px;
+                                            font-style: normal;
+                                            font-weight: 500;
+                                            line-height: 17px;
+                                        }
+
+                                        .close {
+                                            display: block;
+                                            background: url('../img/close.svg') center center/cover no-repeat;
+                                            width: 10px;
+                                            height: 10px;
+                                            position: absolute;
+                                            top: 10px;
+                                            right: 10px;
+                                            z-index: 10;
+                                        }
+                                    }
+
+                                    .visible {
+                                        visibility: visible;
+                                        opacity: 1;
+                                        height: auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .content_bottom {
+                margin-top: 10px;
+                background: transparent;
+                border-radius: 0;
+                padding: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: absolute;
+                bottom: -30px;
+                left: 20%;
+                right: 20%;
+
+                &-item {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 0 15px;
+                    border-radius: 0;
+                    background: $colorWhite;
+                    padding: 15px 20px;
+                    box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.11);
+                    margin: 0;
+                    min-height: 60px;
+
+                    &:first-child {
+                        border-radius: 40px 0px 0px 40px;
+                    }
+
+                    &:last-child {
+                        border-radius: 0 40px 40px 0;
+                    }
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    .img {
+                        width: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-shrink: 0;
+
+                        img {
+                            width: auto;
+                            display: block;
+                        }
+                    }
+
+                    P {
+                        color: #353535;
+                        font-family: Gilroy;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -1,3 +1,6 @@
+
+// sliders
+
 const offersSwiper = document.querySelector('.swiper_offers') || null;
 if (offersSwiper) {
     const sliderOffer = new Swiper(offersSwiper, {
@@ -16,7 +19,6 @@ if (offersSwiper) {
         }
     });
 }
-
 
 const featuresSwiper = document.querySelector('.swiper_features') || null;
 if (featuresSwiper) {
@@ -81,7 +83,7 @@ if (reviewsSwiper) {
 }
 
 
-
+// rating
 const stars = document.querySelectorAll('.star');
 
 stars.forEach((star, index) => {
@@ -110,6 +112,8 @@ stars.forEach((star, index) => {
 });
 
 
+
+// validationForm
 document.querySelector('.form').addEventListener('submit', function (event) {
     event.preventDefault();
 
@@ -145,8 +149,64 @@ document.querySelector('.form').addEventListener('submit', function (event) {
 });
 
 
+//fancybox
 const fancybox = document.querySelector('[data-fancybox]') || null;
 if (fancybox) {
     Fancybox.bind('[data-fancybox]', {
     });
+}
+
+
+// tooltip 
+document.addEventListener('DOMContentLoaded', function () {
+    const tooltip = document.querySelector('.tooltip');
+    const titleSpan = document.querySelector('.title_span');
+    const closeTooltip = document.querySelector('.tooltip .close');
+
+    titleSpan.addEventListener('click', function (event) {
+        event.stopPropagation();
+        tooltip.classList.add('visible');
+    });
+
+    closeTooltip.addEventListener('click', function (event) {
+        event.stopPropagation();
+        tooltip.classList.remove('visible');
+    });
+
+    document.addEventListener('click', function (event) {
+        if (!tooltip.contains(event.target) && !titleSpan.contains(event.target)) {
+            tooltip.classList.remove('visible');
+        }
+    });
+});
+
+
+
+//timer 
+var intervalInDays = 1;
+const timer = document.querySelector('#timer') || null;
+
+if (timer) {
+    function startTimer() {
+        var countdownDate = new Date().getTime() + (intervalInDays * 24 * 60 * 60 * 1000); // Устанавливаем конечное время
+
+        var x = setInterval(function () {
+            var now = new Date().getTime();
+            var distance = countdownDate - now;
+
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("hours").textContent = String(hours).padStart(2, '0');
+            document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(x);
+                startTimer(); // Перезапуск таймера по окончанию
+            }
+        }, 1000);
+    }
+    startTimer();
 }
